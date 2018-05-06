@@ -1,0 +1,22 @@
+{
+  "name": "node-vim-char-class",
+  "version": "1.0.0",
+  "description": "Detect a character class which Vim recognizes when moving with w,b,e,ge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyru/node-vim-char-class.git"
+  },
+  "keywords": [
+    "vim"
+  ],
+  "author": "tyru <tyru.exe@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyru/node-vim-char-class/issues"
+  },
+  "homepage": "https://github.com/tyru/node-vim-char-class#readme"
+}
