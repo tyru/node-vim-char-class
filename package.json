@@ -14,7 +14,7 @@
     "vim"
   ],
   "author": "tyru <tyru.exe@gmail.com>",
-  "license": "ISC",
+  "license": "Vim license",
   "bugs": {
     "url": "https://github.com/tyru/node-vim-char-class/issues"
   },
