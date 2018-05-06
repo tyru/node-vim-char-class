@@ -240,12 +240,7 @@ function getCharClass(s, bigWord) {
     cp = s.codePointAt(0);
   }
 
-  /* when 'akm' (Farsi mode), take care of Farsi blank */
-  // TODO
-  // if (p_altkeymap && cp == F_BLANK)
-  //   return CLASS_WHITESPACE;
-
-  if (cp === 0x20 || cp === 0x9) // ' ' || '\t'
+  if (cp === 0x20 || cp === 0x9 || cp == 0xA0) // ' ' || '\t' || '\xA0'
     return CLASS_WHITESPACE;
   cp = getUnicodeClass(cp);
   if (cp !== CLASS_WHITESPACE && bigWord)
@@ -271,7 +266,7 @@ function getUnicodeClass(s) {
 
   /* First quick check for Latin1 characters, use 'iskeyword'. */
   if (cp < 0x100) {
-    if (cp === 0x20 || cp === 0x9 || cp == 0xA0) // ' ' || '\t' || '\xa0'
+    if (cp === 0x20 || cp === 0x9 || cp == 0xA0) // ' ' || '\t' || '\xA0'
       return CLASS_WHITESPACE;            /* blank */
     if (isWordChar(cp))
       return CLASS_WORD;            /* word character */
