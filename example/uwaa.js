@@ -1,8 +1,8 @@
-const VimChar = require('./index.js');
+const VimChar = require('../index.js');
 const fs = require('fs');
 
 function main() {
-  fs.readFile('./testdata.txt', 'utf8', function (err, text) {
+  fs.readFile('example/louise.txt', 'utf8', function (err, text) {
     if (err) {
       console.error(err);
       return;
