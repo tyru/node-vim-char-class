@@ -84,7 +84,7 @@ const SORTED_CLASSES = [
   {first: 0x2f800, last: 0x2fa1f, class: CLASS_CJK_IDEOGRAPHS}, /* CJK Ideographs */
 ];
 
-const emojiAll = [
+const EMOJI_ALL = [
   {first: 0x203c, last: 0x203c},
   {first: 0x2049, last: 0x2049},
   {first: 0x2122, last: 0x2122},
@@ -288,7 +288,7 @@ function getUnicodeClass(s) {
   }
 
   /* emoji */
-  if (inTable(emojiAll, cp))
+  if (inTable(EMOJI_ALL, cp))
     return CLASS_EMOJI;
 
   /* most other characters are "word" characters */
